@@ -15,7 +15,9 @@ One of the things I am struggling on Flutter is to keep my code simple and reada
 
 All of this to create the best code I can for my current project: Wikly
 
+
 Lesson #1
+
 Explaining how the Clean architecture works, as proposed by Uncle Bob.
 As I understand, it consists of a circle, with the entities layer at the center, followed by the uses cases, then controllers(not sure yet what goes here, but when I read the book I will know), and at last UI, DB, External services and all of that stuff.
 
@@ -30,6 +32,7 @@ As of now, this course is my single source of truth for Clean Architecture, so I
 
 
 One thing I found a little hard to understand is dividing it into 'feature' folders. As of now, I am not sure how this separation works, and most importantly, what is considered a feature. 
+
 
 Lesson #2
 
@@ -54,3 +57,17 @@ Try to make your code better and keeping your test passing (Refactor)
 This course was made before Flutter implemented that Null-Safety stuff. That led me to some weird configuration to use Mockito.
 Just so I do not forget: When I write a test, to use a Mock of something, I have to place @GenerateMocks([array containing classes I want to be mocked]) and add a import to a file with the same name of my test file plus .mocks.dart in it. This will basically generate a file containing Mocks for every class. It is really cool, but I am not completely used to it.
 
+
+Lesson #3
+
+Flutter has Callable Classes. Wtf is this?
+Just name your method 'call', so you can call it without specifying the name.
+
+We created a interface for the Usecases, that uses generics to return types and stuff. Also uses some kind of generic parameters, which I can set on the usage of the interface, that seems a little weird to me as of now.
+
+Additionally, we have made some class just for the parameters, containing the actual parameter used on the method. I do not see the reason for this right now. It just adds complexity for no reason.
+It seems that the Params class was necessary because the interface needs to comply also with not having parameters, and with this separate class, it is possible to implement NoParams class.
+
+I will check if there is another way
+
+In this lesson we completed our Domain layer, creating also the getRandomNumber, together with its test.
