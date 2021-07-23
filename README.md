@@ -71,3 +71,12 @@ It seems that the Params class was necessary because the interface needs to comp
 I will check if there is another way
 
 In this lesson we completed our Domain layer, creating also the getRandomNumber, together with its test.
+
+
+Lesson #4
+
+watch out for the edge cases. most of the times they will be the ones you most need to test.
+What are edge cases? For example in this project, when the API returns some number that does not fit on Int32 object, like 1e+40.
+Stuff that is not always happening, but could break your application.
+It seems that when it comes to test, you should do the exact opposite of YAGNI, because actually you will use every test you write.
+God, I love testing. Implementing some feature, knowing for sure you did not break anything.
