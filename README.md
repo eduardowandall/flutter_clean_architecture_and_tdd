@@ -81,5 +81,16 @@ Stuff that is not always happening, but could break your application.
 It seems that when it comes to test, you should do the exact opposite of YAGNI, because actually you will use every test you write.
 God, I love testing. Implementing some feature, knowing for sure you did not break anything.
 
+
 Lesson #5
+
+Now the reason for Failure class appears. Which is basically to make the repository implementation deal with outside world exceptions.
+So, in this case, the responsibility for handling exceptions are in the repository implementation.
+
+Handling repository problems should be on repository. 
+
+Core folder is everything that is agnostic of feature, like everything that you could use outside of a feature folder.
+
+As of now, we created the interfaces for the data layer, as well as a test class for the repository implementation.
+
 
