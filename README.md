@@ -80,3 +80,6 @@ What are edge cases? For example in this project, when the API returns some numb
 Stuff that is not always happening, but could break your application.
 It seems that when it comes to test, you should do the exact opposite of YAGNI, because actually you will use every test you write.
 God, I love testing. Implementing some feature, knowing for sure you did not break anything.
+
+Lesson #5
+
