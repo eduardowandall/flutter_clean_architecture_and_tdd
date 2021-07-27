@@ -4,7 +4,7 @@ abstract class Failure extends Equatable {
   Failure([List properties = const <dynamic>[]]);
 
   @override
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
 
 // General Failures
