@@ -32,10 +32,10 @@ dependencies:
   # Functional programming thingies
   dartz: ^0.10.0-nullsafety.2
   # Remote API
-  connectivity: ^3.0.6
   http: ^0.13.3
   # Local cache
   shared_preferences: ^2.0.6
+  internet_connection_checker: ^0.0.1+2
 
 dev_dependencies:
   build_runner: ^2.0.6
