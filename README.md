@@ -94,16 +94,29 @@ Core folder is everything that is agnostic of feature, like everything that you 
 As of now, we created the interfaces for the data layer, as well as a test class for the repository implementation.
 
 
-Lesson #6
-
-
-Lesson #7
-
-
-Lesson #8
+Lesson #6, Lesson #7, Lesson #8, Lesson #9
 
 Just plain old testing and implementation
 
 
-Lesson #9
 
+Lesson #10
+
+BLoCs
+Bloc stands for Business Logic Component.
+But on this example it should be Presentation Logic Component.
+This happens because following Clean Architecture, the business logic is contained in the domain layer, which makes bloc not being used for business logic.
+Bloc is a reactive state managment pattern, that sends information into one direction.
+Flow:
+Events -> BLoC -> State
+Events comes from Flutter, goes inside BLoC, do something(in this case, only calls a usecase), then adds to a state.
+It seems similar to Redux on React. I do not know.
+
+I think I can use BLoC as the domain layer in simpler applications, and it seems fluent for using Flutter event queue. Like having a stream.
+
+Events should not convert data. That violates S from SOLID.
+BLoC states are being used for a state for the whole widget. Basically by creating a state for empty, for loading, etc.. we can have a much more separated logic to the widgets.
+
+It is really cool. I can see much value in this. specially to reduce complexity on flutter widgets code, which is my biggest problem with it, as of now.
+
+OOOOH FUCK, Remember when I said that this would be great with streams? BOOM, he just said that. Im on fire. 
