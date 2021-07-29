@@ -58,17 +58,17 @@ class MockNumberTriviaLocalDataSource extends _i1.Mock
   }
 
   @override
-  _i4.Future<_i2.NumberTriviaModel> getLastNumberTrivia() =>
-      (super.noSuchMethod(Invocation.method(#getLastNumberTrivia, []),
-              returnValue:
-                  Future<_i2.NumberTriviaModel>.value(_FakeNumberTriviaModel()))
-          as _i4.Future<_i2.NumberTriviaModel>);
-  @override
   _i4.Future<void> cacheNumberTrivia(_i2.NumberTriviaModel? triviaToCache) =>
       (super.noSuchMethod(
           Invocation.method(#cacheNumberTrivia, [triviaToCache]),
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future<void>.value()) as _i4.Future<void>);
+  @override
+  _i4.Future<_i2.NumberTriviaModel> getLastNumberTrivia() =>
+      (super.noSuchMethod(Invocation.method(#getLastNumberTrivia, []),
+              returnValue:
+                  Future<_i2.NumberTriviaModel>.value(_FakeNumberTriviaModel()))
+          as _i4.Future<_i2.NumberTriviaModel>);
 }
 
 /// A class which mocks [NetworkInfo].
