@@ -119,4 +119,8 @@ BLoC states are being used for a state for the whole widget. Basically by creati
 
 It is really cool. I can see much value in this. specially to reduce complexity on flutter widgets code, which is my biggest problem with it, as of now.
 
-OOOOH FUCK, Remember when I said that this would be great with streams? BOOM, he just said that. Im on fire. 
+Remember when I said that this would be great with streams? BOOM, he just said that. Im on fire. 
+
+
+Lesson #11
+
