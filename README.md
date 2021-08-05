@@ -129,4 +129,7 @@ Lesson #12
 
 Lesson #13
 Implementation of Dependency Injection
-This part I am used to. hehe
+
+Lesson #14
+Implementation of Widgets.
+I found the usage of Bloc really nice. Simply dispatch a event, fires an state that changes something in the screen.

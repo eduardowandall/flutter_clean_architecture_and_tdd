@@ -24,11 +24,12 @@ class NumberTriviaRemoteDataSourceImpl implements NumberTriviaRemoteDataSource {
 
   @override
   Future<NumberTriviaModel> getConcreteNumberTrivia(int number) =>
-      _getTriviaFromUri(Uri(host: 'numbersapi.com', query: '/$number'));
+      _getTriviaFromUri(
+          Uri(host: 'numbersapi.com', path: '$number', scheme: 'http'));
 
   @override
-  Future<NumberTriviaModel> getRandomNumberTrivia() =>
-      _getTriviaFromUri(Uri(host: 'numbersapi.com', query: '/random'));
+  Future<NumberTriviaModel> getRandomNumberTrivia() => _getTriviaFromUri(
+      Uri(host: 'numbersapi.com', path: 'random', scheme: 'http'));
 
   Future<NumberTriviaModel> _getTriviaFromUri(Uri uri) async {
     final response = await client.get(

@@ -16,7 +16,7 @@ import 'features/number_trivia/data/datasources/number_trivia_local_data_source.
 // service locator
 final sl = GetIt.instance;
 
-void init() {
+Future<void> init() async {
   // features - number trivia
   sl.registerFactory(() => NumberTriviaBloc(
       getConcreteNumberTrivia: sl(),
@@ -41,8 +41,8 @@ void init() {
   sl.registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl(sl()));
 
   // external
-  sl.registerLazySingletonAsync<SharedPreferences>(
-      () async => await SharedPreferences.getInstance());
+  final sharedPreferences = await SharedPreferences.getInstance();
+  sl.registerLazySingleton(() => sharedPreferences);
   sl.registerLazySingleton(() => http.Client());
   sl.registerLazySingleton(() => InternetConnectionChecker());
 }
